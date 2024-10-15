@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
-import Navigation from "./components/Navigation";
 import { Spinner } from "@nextui-org/react";
-// import { Skeleton } from "@nextui-org/skeleton";
 import Total from "./components/Total";
-// import Children from "./components/Children";
-// import Adult from "./components/Adult";
-// import Visitors from "./components/Visitors";
 import { Button } from "@nextui-org/react";
 import { data } from "./data/data";
 import { HotelData, Theme } from "./components/types";
@@ -63,11 +58,7 @@ function App({ theme }: { theme: Theme }) {
 
   return (
     <div className="flex flex-col w-full h-[150vh] gap-5 overflow-y-auto">
-      <div className="navigation w-full h-[10vh]">
-        <Navigation />
-      </div>
-
-      <div className="home px-[10vw] flex flex-col gap-5 min-h-[100vh]">
+      <div className="home px-[10vw] py-[10vh] flex flex-col gap-5 min-h-[100vh]">
         <span className="text-3xl font-bold">Dashboard</span>
         <span className="flex flex-row justify-start items-center gap-5">
           <div className="flex flex-row gap-5 border-[1px] rounded-[25px] border-[rgba(0,0,0,0.4)] px-5 py-5">

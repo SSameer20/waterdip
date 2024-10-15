@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { HotelData } from "./types";
 import ApexCharts from "apexcharts";
 
@@ -9,7 +9,6 @@ interface DataDictonary {
 export default function Adult({ data }: { data: HotelData[] }) {
   const [count, setCount] = useState<number>(0);
   const [total, setTotal] = useState<number[]>([]);
-  const chartRef = useRef<ApexCharts | null>(null);
 
   const calculateTotalVisit = async (data: HotelData[]) => {
     const countryMap: DataDictonary = {};
@@ -27,8 +26,6 @@ export default function Adult({ data }: { data: HotelData[] }) {
       }
     });
 
-    // const keyValues = Object.keys(countryMap);
-    // setCountry([...keyValues]);
     const countValues = Object.values(countryMap);
     setTotal([...countValues]);
   };
